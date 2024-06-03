@@ -11,13 +11,14 @@
     <?php
         $conn = new mysqli("localhost", "root", "", "songs") or die("Error");
         $conn->select_db("songs");
-        $wynik = $conn->query("SELECT * FROM queen union SELECT * FROM depechemode union SELECT * FROM pinkfloyd union SELECT * FROM rem union SELECT * FROM gunsnroses union SELECT * FROM nirvana");
+        $wynik = $conn->query("SELECT * FROM queen union SELECT * FROM depechemode union SELECT * FROM pinkfloyd union SELECT * FROM rem union SELECT * FROM metallica union SELECT * FROM foofighters union SELECT * FROM gunsnroses union SELECT * FROM nirvana");
         if($wynik->num_rows>0){
             echo "<center><table>";
             echo"<tr>";
             echo"<th>ID</th>";
             echo"<th>TYTUŁ</th>";
             echo"<th>WYKONAWCA</th>";
+            echo"<th>OCENA</th>";
             echo"</tr>";
             $i=1;
             while($wiersz = $wynik->fetch_assoc()){
@@ -25,6 +26,7 @@
                 echo "<td>". $i ."</td>";
                 echo "<td>". $wiersz["title"]."</td>";
                 echo "<td>". $wiersz["band"]."</td>";
+                echo "<td>". $wiersz["note"]."</td>";
                 echo "</tr>";
                 $i++;
             }
