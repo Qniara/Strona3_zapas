@@ -55,3 +55,25 @@ input[type="submit"]{
     color: white;
     background-color: black;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    overflow: hidden;
+    width: auto;
+}
+li {
+    float: left;
+    position: relative;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #202020;
+}
