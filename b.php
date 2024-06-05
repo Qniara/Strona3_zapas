@@ -3,11 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nela jest chora psychicznie</title>
+    <title>pupcia</title>
     <link rel="stylesheet" href="b.css">
 </head>
 <body background="queen.jpeg">
-    <a href="index.html"><input type="button" class="button" value="Powrót"></a>
+    <a href="index.html"><input type="button" class="button" value="Powrót"></a><br><br>
+    <ul>
+        <li><a href="b1.php">Queen</a></li>
+        <li><a href="b2.php">Depeche Mode</a></li>
+        <li><a href="b3.php">Pink Floyd</a></li>
+        <li><a href="b4.php">R.E.M.</a></li>
+        <li><a href="b5.php">Metallica</a></li>
+        <li><a href="b6.php">Guns N' Roses</a></li>
+        <li><a href="b7.php">Nirvana</a></li>
+       <li><a href="b.php">Wszystko</a></li>
+    </ul><br><br>
     <?php
         $conn = new mysqli("localhost", "root", "", "songs") or die("Error");
         $conn->select_db("songs");
