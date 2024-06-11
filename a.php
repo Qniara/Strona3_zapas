@@ -29,10 +29,10 @@
                     $odp = $conn->query("INSERT INTO rem (id, title, band, note) VALUES (null, '$title', '$band', '$note')");
                 }
                 else if($band=="Metallica"){
-                    $odp = $conn->query("INSERT INTO rem (id, title, band, note) VALUES (null, '$title', '$band', '$note')");
+                    $odp = $conn->query("INSERT INTO metallica (id, title, band, note) VALUES (null, '$title', '$band', '$note')");
                 }
                 else if($band=="Foo Fighters"){
-                    $odp = $conn->query("INSERT INTO rem (id, title, band, note) VALUES (null, '$title', '$band', '$note')");
+                    $odp = $conn->query("INSERT INTO foofighters (id, title, band, note) VALUES (null, '$title', '$band', '$note')");
                 }
                 else if($band=="Guns N Roses"){
                     $odp = $conn->query("INSERT INTO gunsnroses (id, title, band, note) VALUES (null, '$title', '$band', '$note')");
