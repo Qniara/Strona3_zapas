@@ -9,19 +9,20 @@
 <body background="queen.jpeg">
     <a href="index.html"><input type="button" class="button" value="Powrót"></a><br><br>
     <ul>
+        <li><a href="b.php">Wszystko</a></li>
         <li><a href="b1.php">Queen</a></li>
         <li><a href="b2.php">Depeche Mode</a></li>
         <li><a href="b3.php">Pink Floyd</a></li>
         <li><a href="b4.php">R.E.M.</a></li>
+        <li><a href="b8.php">Foo Fighters</a></li>
         <li><a href="b5.php">Metallica</a></li>
         <li><a href="b6.php">Guns N' Roses</a></li>
         <li><a href="b7.php">Nirvana</a></li>
-       <li><a href="b.php">Wszystko</a></li>
     </ul><br><br>
     <?php
         $conn = new mysqli("localhost", "root", "", "songs") or die("Error");
         $conn->select_db("songs");
-        $wynik = $conn->query("SELECT * FROM queen union SELECT * FROM depechemode union SELECT * FROM pinkfloyd union SELECT * FROM rem union SELECT * FROM metallica union SELECT * FROM foofighters union SELECT * FROM gunsnroses union SELECT * FROM nirvana");
+        $wynik = $conn->query("SELECT * FROM queen union SELECT * FROM depechemode union SELECT * FROM pinkfloyd union SELECT * FROM rem union SELECT * FROM foofighters union SELECT * FROM metallica union SELECT * FROM gunsnroses union SELECT * FROM nirvana");
         if($wynik->num_rows>0){
             echo "<center><table>";
             echo"<tr>";
